@@ -1,7 +1,10 @@
 <template>
   <div class="simcard-form-container">
-    <h1 class="title">Testing => SimCard Form</h1>
+    <h1 class="title">Testing Form</h1>
     <form>
+      <div class="simcard-form-container__element">
+        <h2>SIM Card Form</h2>
+      </div>
       <div class="simcard-form-container__element">
         <div class="simcard-form-container__label">
           <label for="simId">Sim Id:</label>

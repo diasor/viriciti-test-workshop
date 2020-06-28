@@ -2,19 +2,10 @@
   <div id="app">
     <img src="./assets/viriciti-logo.png" />
     <div class="link-container">
-      <router-link class="link" :to="{ path: '/simform' }"
-        >Testing Forms</router-link
-      >
-      <router-link
-        class="link"
-        :to="{ path: '/temperature', query: { temp: 60 } }"
-        >Testing Computed</router-link
-      >
-      <router-link class="link" :to="{ path: '/simlist' }"
-        >Testing Vuex</router-link
-      >
-      <router-link class="link" :to="{ path: '/' }">Home</router-link>
-      <router-link class="link" :to="{ path: '/about' }">About</router-link>
+      <!-- <router-link class="link" :to="{ path: '/'}">Testing Form</router-link> -->
+      <router-link class="link" :to="{ path: '/', query: { temp: 60 }}">Testing Computed</router-link>
+      <router-link class="link" :to="{ path: '/simform'}">Testing Form</router-link>
+      <router-link class="link" :to="{ path: '/vuex', query: { temp: 60 }}">Testing Vuex</router-link>
     </div>
     <div class="component-container">
       <router-view></router-view>
@@ -25,13 +16,13 @@
 
 <script>
 export default {
-  name: "App",
-}
+  name: 'App'
+};
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -50,16 +41,36 @@ img {
   /* height: 30%; */
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
 .title {
   font-size: 15px;
   color: black;
   font-weight: 700;
   text-align: left;
 }
+
 .link-container {
   display: flex;
   flex-direction: row;
 }
+
 .link {
   display: flex;
   /* flex-direction: row; */

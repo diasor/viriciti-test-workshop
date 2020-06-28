@@ -1,46 +1,26 @@
 import Vue from "vue"
-import VueRouter from "vue-router"
-import Home from "../views/Home.vue"
+import Router from "vue-router"
+import Temperature from "../components/Temperature.vue"
+import SimCardForm from "../components/SimCardForm"
+import SimCardsList from "../components/SimCardsList"
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
-  {
-    path: "/temperature",
-    props: (route) => ({ temp: route.query.temp }),
-    component: () =>
-      import(
-        /* webpackChunkName: "temperature" */ "../components/Temperature.vue"
-      ),
-  },
-  {
-    path: "/simform",
-    component: () =>
-      import(/* webpackChunkName: "simform" */ "../components/SimCardForm.vue"),
-  },
-  {
-    path: "/simlist",
-    component: () =>
-      import(/* webpackChunkName: "simlist" */ "../components/SimCardList.vue"),
-  },
-]
-
-const router = new VueRouter({
-  routes,
+export default new Router({
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      component: Temperature,
+      props: (route) => ({ temp: route.query.temp }),
+    },
+    {
+      path: "/simform",
+      component: SimCardForm,
+    },
+    {
+      path: "/vuex",
+      component: SimCardsList,
+    },
+  ],
 })
-
-export default router

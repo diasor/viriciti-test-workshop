@@ -16,30 +16,35 @@
 
 <script>
 export default {
-  props: ["temp"],
+  props: {
+    temp: {
+      type: [String, Number],
+      default: 0
+    }
+  },
   data() {
     return {
-      type: "celsius",
-      degrees: 0,
-    }
+      type: 'celsius',
+      degrees: 0
+    };
   },
   computed: {
     celsius() {
-      if (this.type === "celsius") return this.degrees
-      else return parseInt((this.degrees - 32) * 0.556, 10)
+      if (this.type === 'celsius') return this.degrees;
+      else return parseInt((this.degrees - 32) * 0.556, 10);
     },
     fahrenheit() {
-      if (this.type === "fahrenheit") return this.degrees
-      else return this.degrees * 1.8 + 32
-    },
+      if (this.type === 'fahrenheit') return this.degrees;
+      else return this.degrees * 1.8 + 32;
+    }
   },
   created() {
     if (this.temp) {
-      this.degrees = parseInt(this.temp, 10)
-      this.type = String(this.temp).endsWith("f") ? "fahrenheit" : "celsius"
+      this.degrees = parseInt(this.temp, 10);
+      this.type = String(this.temp).endsWith('f') ? 'fahrenheit' : 'celsius';
     }
-  },
-}
+  }
+};
 </script>
 <style>
 .temperature-container {
