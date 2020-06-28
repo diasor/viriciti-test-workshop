@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div class="simcard-form-container">
+  <h1 class="title">Testing =&gt; SimCard Form</h1>
+  <form>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="simId">Sim Id:</label></div> <input name="simId" type="text">
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="providers">Provider:</label></div> <select name="providers" id="providers" class="custom-select" style="width: 200px;">
+        <option value=""></option>
+        <option value="vodafone">Vodafone</option>
+        <option value="tmobile">T-Mobile</option>
+        <option value="mercedes">Another</option>
+      </select>
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="status">Status:</label></div> <select name="status" id="status" class="custom-select" style="width: 200px;">
+        <option value=""></option>
+        <option value="alive">alive</option>
+        <option value="pending">pending</option>
+        <option value="cancel">cancel</option>
+      </select>
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__button"><button name="submitSimCard">Add SimCard</button></div>
+      <div class="simcard-form-container__button"><button name="addAndPrintSimCard">Add &amp; Print SimCard</button></div>
+    </div>
+    <div name="successSubmit" class="success-submit fade-out" style="display: none;">The simcard was successfully added!</div>
+    <div name="simCardInformation" class="show-information fade-out" style="display: none;">SIM Card added!</div>
+  </form>
+</div>
+`;
+
+exports[` 2`] = `
+<div class="simcard-form-container">
+  <h1 class="title">Testing =&gt; SimCard Form</h1>
+  <form>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="simId">Sim Id:</label></div> <input name="simId" type="text">
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="providers">Provider:</label></div> <select name="providers" id="providers" class="custom-select" style="width: 200px;">
+        <option value=""></option>
+        <option value="vodafone">Vodafone</option>
+        <option value="tmobile">T-Mobile</option>
+        <option value="mercedes">Another</option>
+      </select>
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__label"><label for="status">Status:</label></div> <select name="status" id="status" class="custom-select" style="width: 200px;">
+        <option value=""></option>
+        <option value="alive">alive</option>
+        <option value="pending">pending</option>
+        <option value="cancel">cancel</option>
+      </select>
+    </div>
+    <div class="simcard-form-container__element">
+      <div class="simcard-form-container__button"><button name="submitSimCard">Add SimCard</button></div>
+      <div class="simcard-form-container__button"><button name="addAndPrintSimCard">Add &amp; Print SimCard</button></div>
+    </div>
+    <div name="successSubmit" class="success-submit fade-out" style="display: none;">The simcard was successfully added!</div>
+    <div name="simCardInformation" class="show-information fade-out" style="display: none;">SIM Card added!</div>
+  </form>
+</div>
+`;

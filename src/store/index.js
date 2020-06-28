@@ -1,15 +1,27 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  state: {
+export default {
+  state() {
+    return {
+      simCards: [],
+    }
   },
+
   mutations: {
+    addSimCard: (state, card) => state.simCards.push(card),
+
+    deleteSimCard(state, card) {
+      state.simCards = state.simCards.filter((item) => {
+        return item.id !== card.id
+      })
+    },
   },
+
   actions: {
+    addSimCard: ({ commit }, card) => commit("addSimCard", card),
+
+    deleteSimCard: ({ commit }, card) => commit("deleteSimCard", card),
   },
-  modules: {
-  }
-})
+
+  getters: {
+    simCards: (state) => state.simCards,
+  },
+}
