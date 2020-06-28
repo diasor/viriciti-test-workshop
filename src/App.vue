@@ -2,7 +2,6 @@
   <div id="app">
     <img src="./assets/viriciti-logo.png" />
     <div class="link-container">
-      <!-- <router-link class="link" :to="{ path: '/'}">Testing Form</router-link> -->
       <router-link class="link" :to="{ path: '/', query: { temp: 60 }}">Testing Computed</router-link>
       <router-link class="link" :to="{ path: '/simform'}">Testing Form</router-link>
       <router-link class="link" :to="{ path: '/vuex', query: { temp: 60 }}">Testing Vuex</router-link>
@@ -73,7 +72,6 @@ h3 {
 
 .link {
   display: flex;
-  /* flex-direction: row; */
   margin-left: 0;
   padding: 5px;
 }

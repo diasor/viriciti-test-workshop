@@ -132,10 +132,10 @@ export default {
 </script>
 <style scoped>
 .simcard-form-container {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
 }
+
 h3 {
   margin: 40px 0 0 0;
 }
@@ -143,8 +143,8 @@ h3 {
 a {
   color: #42b983;
 }
+
 label {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: black;
   padding-top: 5px;
@@ -154,12 +154,10 @@ input {
   margin: 0 5px;
   width: 190px;
   height: 20px !important;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
 input::placeholder {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
   padding-top: 5px;
 }
@@ -167,10 +165,8 @@ input::placeholder {
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  /* font-family: Arial; */
   height: 25px;
   margin: 0 5px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -199,7 +195,7 @@ input::placeholder {
 .simcard-form-container__element {
   display: flex;
   padding: 0.2rem 0.5rem;
-  width: 50rem;
+  width: 320px;
 }
 
 .simcard-form-container__label {
