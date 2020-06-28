@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/viriciti-logo.png" />
+    <img class="logo" src="./assets/viriciti-logo.png" />
     <div class="link-container">
       <router-link class="link" :to="{ path: '/', query: { temp: 60 }}">Testing Computed</router-link>
       <router-link class="link" :to="{ path: '/simform'}">Testing Form</router-link>
       <router-link class="link" :to="{ path: '/vuex', query: { temp: 60 }}">Testing Vuex</router-link>
+      <router-link class="link" :to="{ path: '/dogs'}">Testing Methods</router-link>
     </div>
     <div class="component-container">
       <router-view></router-view>
@@ -26,18 +27,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
+  margin: 5px 0 0 0;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
-  align-content: flex-start;
-  padding: 0 15px;
 }
 
-img {
+.logo {
   margin: 0;
-  width: 25%;
-  /* height: 30%; */
+  padding: 0;
+  max-width: 120px;
 }
 
 h1,
@@ -68,12 +67,14 @@ h3 {
 .link-container {
   display: flex;
   flex-direction: row;
+  margin-top: -20px;
 }
 
 .link {
   display: flex;
-  margin-left: 0;
-  padding: 5px;
+  margin: 0;
+  padding: 0 5px;
+  font-size: 15px;
 }
 
 .router-link-active {
@@ -83,7 +84,7 @@ h3 {
 .component-container {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 10px 5px;
   padding: 10px 5px;
   border: 1px lightgrey solid;
   border-radius: 5px;

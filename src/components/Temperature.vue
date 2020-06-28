@@ -1,6 +1,7 @@
 <template>
   <div class="temperature-container">
     <h1 class="title">Testing Computed & Watchers</h1>
+    <h2>Temperature Form</h2>
     <span class="item">
       <strong>Prop temp:</strong>
       {{ temp }}

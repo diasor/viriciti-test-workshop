@@ -205,7 +205,7 @@ input::placeholder {
 
 .simcard-form-container__button {
   display: flex;
-  padding: 0 0.5rem 0 0;
+  padding: 1rem 0.5rem 0 0;
 }
 
 .success-submit {
