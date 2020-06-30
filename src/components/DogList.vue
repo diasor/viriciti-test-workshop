@@ -2,30 +2,40 @@
 <template>
   <div>
     <h1 class="title">Testing Methods & HTTP requests</h1>
-    <h2>Dogs List</h2>
-    <div v-if="dogs.length" class="dog-container">
+    <h2>Dogs List by breed: {{ breed }}</h2>
+    <div v-if="dogs && dogs.length" class="dog-container">
       <div v-for="(dog) in dogs" :key="dog" class="dog-card">
-        <img :src="dog" />
+        <img :src="dog">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      dogs: []
+      dogs: [],
+      breed: "hound",
     };
   },
   created() {
-    this.getDogs();
+    this.fetchDogs();
   },
   methods: {
-    getDogs() {
-      fetch('https://dog.ceo/api/breed/hound/images')
-        .then(response => response.json())
-        .then(data => (this.dogs = data.message));
+    buildUrl(breed) {
+      return `https://dog.ceo/api/breed/${breed}/images`;
+    },
+
+    fetchDogs() {
+      const url = this.buildUrl(this.breed);
+      const axiosPromise = axios.get(url);
+      axiosPromise.then(results => {
+        this.dogs = results.data.message;
+      });
+      return axiosPromise;
     }
   }
 };
@@ -44,7 +54,7 @@ export default {
 }
 
 ul li:before {
-  content: '\1F436';
+  content: "\1F436";
 }
 
 img {

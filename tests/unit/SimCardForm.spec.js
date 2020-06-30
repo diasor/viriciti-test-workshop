@@ -1,9 +1,9 @@
 import SimCardForm from "@/components/SimCardForm"
-import { mount } from "@vue/test-utils"
+import { shallowMount } from "@vue/test-utils"
 import { nextTick } from "vue"
 
 describe("testing inputs on the SimCard form", () => {
-  const wrapper = mount(SimCardForm)
+  const wrapper = shallowMount(SimCardForm)
   expect(wrapper).toMatchSnapshot()
   const form = wrapper.find("form")
 
@@ -21,7 +21,7 @@ describe("testing inputs on the SimCard form", () => {
 })
 
 describe("setting values and submiting the SimCard form", () => {
-  const wrapper = mount(SimCardForm)
+  const wrapper = shallowMount(SimCardForm)
   // mock the addNewSimCard
   wrapper.vm.addNewSimCard = jest.fn()
   expect(wrapper).toMatchSnapshot()
@@ -38,11 +38,7 @@ describe("setting values and submiting the SimCard form", () => {
     // test that the provider select input exists, has the expected amount of options and that it has set the "vodafone" option
     const providerSelectInput = form.find(providerSelector)
     expect(providerSelectInput.findAll("option").length).toBe(4)
-    form
-      .find(providerSelector)
-      .findAll("option")
-      .at(1)
-      .setSelected()
+    providerSelectInput.findAll("option").at(1).setSelected()
     expect(providerSelectInput.element.value).toBe("vodafone")
 
     // test that it was properly set

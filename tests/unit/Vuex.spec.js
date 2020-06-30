@@ -1,5 +1,5 @@
 import Vuex from "vuex"
-import { mount, createLocalVue } from "@vue/test-utils"
+import { mount, shallowMount, createLocalVue } from "@vue/test-utils"
 import SimCardList from "@/components/SimCardList"
 import simCardStore from "@/store/index"
 
@@ -9,7 +9,7 @@ describe("testing SimCards store", () => {
 
   it("loads the store and tests the getter ", () => {
     const store = new Vuex.Store(simCardStore)
-    const wrapper = mount(SimCardList, {
+    const wrapper = shallowMount(SimCardList, {
       localVue: VueWithVuex,
       store,
     })
@@ -26,7 +26,7 @@ describe("testing SimCards store", () => {
 
   it("tests addSimCard store action and tests the getter", () => {
     const store = new Vuex.Store(simCardStore)
-    const wrapper = mount(SimCardList, {
+    const wrapper = shallowMount(SimCardList, {
       localVue: VueWithVuex,
       store,
     })

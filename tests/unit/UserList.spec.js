@@ -38,7 +38,7 @@ describe.skip("user list component", () => {
 
   it("filters the input on the user list", async () => {
     const pickNameForFilter = wrapper.props("users")[1]
-    console.log("selected name", pickNameForFilter)
+    // console.log("selected name", pickNameForFilter)
 
     wrapper.find("input").setValue(pickNameForFilter)
     await nextTick()

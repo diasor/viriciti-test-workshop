@@ -34,10 +34,6 @@ export default {
       // this.simCards.splice(index, 1);
       this.deleteSimCard(card);
     }
-  },
-
-  created() {
-    console.log('simcards', this.simCards);
   }
 };
 </script>
